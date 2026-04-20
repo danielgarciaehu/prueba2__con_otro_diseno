@@ -6,7 +6,7 @@ import numpy as np
 from pathlib import Path
 
 st.set_page_config(
-    page_title="Dashboard Encuestas CCEE",
+    page_title="Encuestas CCEE",
     layout="wide",
     initial_sidebar_state="collapsed",
 )
@@ -212,7 +212,7 @@ if solo_completas:
     df = df[df["UltimaPagina"].astype(str).str.strip().str.startswith("4")]
 
 # ── HEADER ────────────────────────────────────────────────────────────────────
-st.title("Dashboard Encuestas CCEE Extrahospitalaria")
+st.title("Encuestas CCEE Extrahospitalaria")
 fecha_ini = df["FechaEnvio"].min()
 fecha_fin = df["FechaEnvio"].max()
 st.caption(
